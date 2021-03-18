@@ -6,8 +6,6 @@
 #include <memory>
 #include <string>
 
-#define HZ 1
-
 using std::placeholders::_1;
 
 class ImageSaver : public rclcpp::Node
