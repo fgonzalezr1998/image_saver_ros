@@ -14,7 +14,7 @@ public:
   ImageSaver(const std::string & node_name)
   : Node(node_name), current_img_(NULL), clock_(RCL_SYSTEM_TIME)
   {
-    this->declare_parameter<int>("freq", 5);
+    this->declare_parameter<double>("freq", 5);
     this->declare_parameter<std::string>("image_topic", "/xtion/rgb/image_raw");
     this->declare_parameter<std::string>("prefix_name", "");
 
@@ -102,7 +102,7 @@ private:
   }
 
   std::string image_topic_, prefix_name_;
-  int freq_;
+  double freq_;
   sensor_msgs::msg::Image::SharedPtr current_img_;
   rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr image_sub_;
   rclcpp::Clock clock_;
