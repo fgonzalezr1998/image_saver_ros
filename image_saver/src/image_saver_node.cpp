@@ -14,7 +14,7 @@ public:
   ImageSaver(const std::string & node_name)
   : Node(node_name), current_img_(NULL), clock_(RCL_SYSTEM_TIME)
   {
-    this->declare_parameter<double>("freq", 5);
+    this->declare_parameter<double>("freq", 5.0);
     this->declare_parameter<std::string>("image_topic", "/xtion/rgb/image_raw");
     this->declare_parameter<std::string>("prefix_name", "");
 

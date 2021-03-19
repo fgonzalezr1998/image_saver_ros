@@ -41,5 +41,5 @@ It is subscribed to the camera image topic (sensor_msg/msg/Image) and it save fr
 #### Parameters
 
 * **image_topic:** RGB image topic. By default: */xtion/rgb/image_raw*
-* **freq:** Image saving frequency. By default, 5Hz
+* **freq:** Image saving frequency. It must be a **double**. By default, 5.0 Hz
 * **prefix_name:** prefix for de output file name of the image. For example, if prefix is *foo*, the output image will be named something like *foo_1616182643641073523.jpg*, where *1616182643641073523* is de system time in nanoseconds. By default, an empty prefix name is used
